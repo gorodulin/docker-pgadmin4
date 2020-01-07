@@ -1,0 +1,21 @@
+SCRIPT=`realpath -s $0`
+PROJECTROOT=`dirname $SCRIPT`
+
+#
+# Config
+#
+
+PGADMIN_DEFAULT_EMAIL="login@example.com"
+PGADMIN_DEFAULT_PASSWORD="XXXXXXXXXXXXXXXXXXXXX"
+
+PGADMIN_VERSION="4.16"
+PGADMIN_CONTAINER_NAME="pgadmin4"
+PGADMIN_CONTAINER_HOSTNAME="pgadmin4"
+PGADMIN_EXPOSED_PORT=8088
+PGADMIN_DATA_VOLUME_PATH=$PROJECTROOT/volumes/pgadmin4_data
+PGADMIN_NETWORK_NAME="nginx-proxy-net"
+
+
+# Helper function. Prints command before execution (alternative to `set -x`)
+
+exe() { echo -e "\n$(tput setaf 6)$@$(tput sgr0)" ; "$@" ; }
