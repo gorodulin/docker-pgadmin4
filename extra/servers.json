@@ -1,0 +1,22 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "postgres@postgres",
+            "Group": "Servers",
+            "Port": 5432,
+            "Username": "postgres",
+            "Host": "postgres",
+            "SSLMode": "prefer",
+            "MaintenanceDB": "postgres"
+        },
+        "2": {
+            "Name": "discourse@postgres",
+            "Group": "Servers",
+            "Port": 5432,
+            "Username": "discourse",
+            "Host": "postgres",
+            "SSLMode": "prefer",
+            "MaintenanceDB": "postgres"
+        }
+    }
+}
